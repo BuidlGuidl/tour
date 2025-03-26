@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Header } from "~~/components/Header";
 
 export default function Home() {
   return (
@@ -21,6 +22,9 @@ export default function Home() {
         }}
         priority
       />
+      <div style={{ position: "relative", zIndex: 10 }}>
+        <Header />
+      </div>
     </div>
   );
 }
