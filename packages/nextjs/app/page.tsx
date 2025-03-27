@@ -1,8 +1,15 @@
+"use client";
+
+import { useCallback } from "react";
 import Image from "next/image";
-import { Footer } from "~~/components/Footer";
+// import { Footer } from "~~/components/Footer";
 import { Header } from "~~/components/Header";
 
 export default function Home() {
+  const scrollToEvents = useCallback(() => {
+    document.getElementById("events-section")?.scrollIntoView({ behavior: "smooth" });
+  }, []);
+
   return (
     <div className="min-h-screen relative">
       <div className="absolute inset-0 -top-[20px]">
@@ -31,9 +38,11 @@ export default function Home() {
               />
             </div>
             <div className="lg:w-1/2">
-              <h1 className="text-6xl lg:text-7xl font-bold text-white">Ethereum on Tour</h1>
-              <p className="py-6 text-gray-300">Learn, build, and thrive on Ethereum.</p>
-              <button className="btn btn-primary">Follow our next dates ↓</button>
+              <h1 className="text-6xl lg:text-7xl font-bold text-black">Ethereum on Tour</h1>
+              <p className="py-6 text-black">Learn, build, and thrive on Ethereum.</p>
+              <button className="btn btn-primary" onClick={scrollToEvents}>
+                Follow our next dates ↓
+              </button>
             </div>
           </div>
         </div>
@@ -41,7 +50,7 @@ export default function Home() {
         {/* New Map Section */}
         <div className="container mx-auto px-4 py-20">
           <div className="flex flex-col items-center">
-            <h2 className="text-4xl font-bold text-center mb-10">Our Tour Locations</h2>
+            <h2 className="text-4xl font-bold text-center mb-10">Upcoming Locations</h2>
             <div className="relative w-full max-w-4xl">
               <Image
                 src="/assets/map.png" // Add your map image to public/assets/
@@ -51,6 +60,66 @@ export default function Home() {
                 className="w-full h-auto"
                 sizes="(max-width: 1200px) 100vw, 1200px"
               />
+            </div>
+          </div>
+        </div>
+
+        {/* Events Section */}
+        <div id="events-section" className="container mx-auto px-4 py-20">
+          <h2 className="text-4xl font-bold mb-12">Next events:</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Event Card 1 */}
+            <div className="rounded-[24px] overflow-hidden bg-white shadow-lg">
+              <div className="p-6 bg-sky-200 rounded-t-[24px]">
+                <div className="text-xl">Jan 25</div>
+                <h3 className="text-2xl font-bold">SpeedrunEthereum</h3>
+                <p className="text-gray-700">Denver University, Denver, CO</p>
+              </div>
+              <div className="p-6">
+                <p className="text-gray-600 mb-6">
+                  We&apos;ll be at Denver University giving a talk and workshop introducing speedrunethereum.com, and
+                  we&apos;ll run through the first challenge together.
+                </p>
+                <button className="bg-sky-200 text-gray-800 px-6 py-2 rounded-[32px] hover:bg-sky-300 transition-colors">
+                  Read more
+                </button>
+              </div>
+            </div>
+
+            {/* Event Card 2 */}
+            <div className="rounded-[24px] overflow-hidden bg-white shadow-lg">
+              <div className="p-6 bg-sky-200 rounded-t-[24px]">
+                <div className="text-xl">Jan 25</div>
+                <h3 className="text-2xl font-bold">SpeedrunEthereum</h3>
+                <p className="text-gray-700">Denver University, Denver, CO</p>
+              </div>
+              <div className="p-6">
+                <p className="text-gray-600 mb-6">
+                  We&apos;ll be at Denver University giving a talk and workshop introducing speedrunethereum.com, and
+                  we&apos;ll run through the first challenge together.
+                </p>
+                <button className="bg-sky-200 text-gray-800 px-6 py-2 rounded-[32px] hover:bg-sky-300 transition-colors">
+                  Read more
+                </button>
+              </div>
+            </div>
+
+            {/* Event Card 3 */}
+            <div className="rounded-[24px] overflow-hidden bg-white shadow-lg">
+              <div className="p-6 bg-sky-200 rounded-t-[24px]">
+                <div className="text-xl">Jan 25</div>
+                <h3 className="text-2xl font-bold">SpeedrunEthereum</h3>
+                <p className="text-gray-700">Denver University, Denver, CO</p>
+              </div>
+              <div className="p-6">
+                <p className="text-gray-600 mb-6">
+                  We&apos;ll be at Denver University giving a talk and workshop introducing speedrunethereum.com, and
+                  we&apos;ll run through the first challenge together.
+                </p>
+                <button className="bg-sky-200 text-gray-800 px-6 py-2 rounded-[32px] hover:bg-sky-300 transition-colors">
+                  Read more
+                </button>
+              </div>
             </div>
           </div>
         </div>
