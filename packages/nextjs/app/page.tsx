@@ -3,28 +3,20 @@ import { Header } from "~~/components/Header";
 
 export default function Home() {
   return (
-    <div
-      style={{
-        width: "100%",
-        height: "200vh",
-        margin: 0,
-        padding: 0,
-        position: "relative",
-      }}
-    >
-      <Image
-        src="/tour.png"
-        alt="Ethereum on Tour"
-        fill
-        style={{
-          objectFit: "cover",
-          objectPosition: "top",
-        }}
-        priority
-      />
-      <div style={{ position: "relative", zIndex: 10 }}>
-        <Header />
+    <>
+      <Header />
+      <div className="hero min-h-screen bg-base-200">
+        <div className="hero-content flex-col lg:flex-row-reverse">
+          <div className="lg:w-1/2">
+            <Image src="/assets/airship.png" alt="Airship" width={1000} height={1000} className="" />
+          </div>
+          <div className="lg:w-1/2">
+            <h1 className="text-5xl font-bold">Ethereum on Tour</h1>
+            <p className="py-6">Learn, build, and thrive on Ethereum.</p>
+            <button className="btn btn-primary">Follow our next dates ↓</button>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
