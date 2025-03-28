@@ -2,8 +2,12 @@
 
 import { useCallback } from "react";
 import Image from "next/image";
-// import { Footer } from "~~/components/Footer";
+
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import { Footer } from "~~/components/Footer";
 import { Header } from "~~/components/Header";
+
+/* eslint-enable @typescript-eslint/no-unused-vars */
 
 export default function Home() {
   const scrollToEvents = useCallback(() => {
@@ -40,7 +44,7 @@ export default function Home() {
             <div className="lg:w-1/2">
               <h1 className="text-6xl lg:text-7xl font-bold text-black">Ethereum on Tour</h1>
               <p className="py-6 text-black">Learn, build, and thrive on Ethereum.</p>
-              <button className="btn btn-primary" onClick={scrollToEvents}>
+              <button className="btn btn-primary bg-sky-200 hover:bg-sky-300 border-none" onClick={scrollToEvents}>
                 Follow our next dates ↓
               </button>
             </div>
@@ -124,6 +128,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
