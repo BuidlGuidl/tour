@@ -2,12 +2,8 @@
 
 import { useCallback } from "react";
 import Image from "next/image";
-
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Footer } from "~~/components/Footer";
 import { Header } from "~~/components/Header";
-
-/* eslint-enable @typescript-eslint/no-unused-vars */
 
 export default function Home() {
   const scrollToEvents = useCallback(() => {
