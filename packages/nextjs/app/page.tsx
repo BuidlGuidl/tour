@@ -12,12 +12,12 @@ export default function Home() {
 
   return (
     <div className="min-h-screen relative">
-      <div className="absolute inset-0 -top-[20px]">
+      <div className="absolute inset-0 -top-[20px] bg-[#FFE7B5]">
         <Image
           src="/assets/background.png"
           alt="Background"
           fill
-          className="object-cover object-top"
+          className="object-contain object-top"
           priority
           sizes="100vw"
           quality={100}
@@ -123,8 +123,8 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <Footer />
       </div>
-      <Footer />
     </div>
   );
 }
