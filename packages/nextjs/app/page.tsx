@@ -39,7 +39,7 @@ export default function Home() {
             </div>
             <div className="lg:w-1/2">
               <h1 className="text-6xl lg:text-7xl font-bold text-black">Ethereum on Tour</h1>
-              <p className="py-6 text-black">Learn, build, and thrive on Ethereum.</p>
+              <p className="py-6 text-black">Bringing Ethereum curriculum, tools, and mentorship to you!</p>
               <button className="btn btn-primary bg-sky-200 hover:bg-sky-300 border-none" onClick={scrollToEvents}>
                 Follow our next dates ↓
               </button>
@@ -71,53 +71,46 @@ export default function Home() {
             {/* Event Card 1 */}
             <div className="rounded-[24px] overflow-hidden bg-white shadow-lg">
               <div className="p-6 bg-sky-200 rounded-t-[24px]">
-                <div className="text-xl">Jan 25</div>
-                <h3 className="text-2xl font-bold">SpeedrunEthereum</h3>
-                <p className="text-gray-700">Denver University, Denver, CO</p>
+                <div className="text-xl">Mar 9</div>
+                <h3 className="text-2xl font-bold">Virtual Office Hours</h3>
+                <p className="text-gray-700">KU Blockchain Club</p>
               </div>
               <div className="p-6">
-                <p className="text-gray-600 mb-6">
-                  We&apos;ll be at Denver University giving a talk and workshop introducing speedrunethereum.com, and
-                  we&apos;ll run through the first challenge together.
-                </p>
-                <button className="bg-sky-200 text-gray-800 px-6 py-2 rounded-[32px] hover:bg-sky-300 transition-colors">
-                  Read more
-                </button>
+                <p className="text-gray-600 mb-6">Open office hours on Zoom with the KU Blockchain Club.</p>
               </div>
             </div>
 
             {/* Event Card 2 */}
             <div className="rounded-[24px] overflow-hidden bg-white shadow-lg">
               <div className="p-6 bg-sky-200 rounded-t-[24px]">
-                <div className="text-xl">Jan 25</div>
-                <h3 className="text-2xl font-bold">SpeedrunEthereum</h3>
-                <p className="text-gray-700">Denver University, Denver, CO</p>
+                <div className="text-xl">Apr 1</div>
+                <h3 className="text-2xl font-bold">Speedrun Ethereum Workshop</h3>
+                <p className="text-gray-700">ETHTaipei</p>
               </div>
               <div className="p-6">
                 <p className="text-gray-600 mb-6">
-                  We&apos;ll be at Denver University giving a talk and workshop introducing speedrunethereum.com, and
-                  we&apos;ll run through the first challenge together.
+                  We&apos;ll show off SpeedRun Ethereum and dive into vibe coding onchain apps and the art of
+                  one-shotting.
                 </p>
-                <button className="bg-sky-200 text-gray-800 px-6 py-2 rounded-[32px] hover:bg-sky-300 transition-colors">
-                  Read more
-                </button>
               </div>
             </div>
 
             {/* Event Card 3 */}
             <div className="rounded-[24px] overflow-hidden bg-white shadow-lg">
               <div className="p-6 bg-sky-200 rounded-t-[24px]">
-                <div className="text-xl">Jan 25</div>
-                <h3 className="text-2xl font-bold">SpeedrunEthereum</h3>
-                <p className="text-gray-700">Denver University, Denver, CO</p>
+                <div className="text-xl">Coming Soon...</div>
+                <h3 className="text-2xl font-bold">Your University Here</h3>
+                <p className="text-gray-700"></p>
               </div>
               <div className="p-6">
                 <p className="text-gray-600 mb-6">
-                  We&apos;ll be at Denver University giving a talk and workshop introducing speedrunethereum.com, and
-                  we&apos;ll run through the first challenge together.
+                  We are traveling all over the world to bring Ethereum education to you!
                 </p>
-                <button className="bg-sky-200 text-gray-800 px-6 py-2 rounded-[32px] hover:bg-sky-300 transition-colors">
-                  Read more
+                <button
+                  className="bg-sky-200 text-gray-800 px-6 py-2 rounded-[32px] hover:bg-sky-300 transition-colors"
+                  onClick={() => window.open("https://telegram.me/austingriffith", "_blank")}
+                >
+                  Message Austin on Telegram
                 </button>
               </div>
             </div>
