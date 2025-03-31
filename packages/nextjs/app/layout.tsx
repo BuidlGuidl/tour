@@ -37,7 +37,10 @@ const ppWriter = localFont({
   variable: "--font-ppwriter",
 });
 
-export const metadata = getMetadata({ title: "Scaffold-ETH 2 App", description: "Built with 🏗 Scaffold-ETH 2" });
+export const metadata = getMetadata({
+  title: "Ethereum on Tour",
+  description: "Bringing Ethereum curriculum, tools, and mentorship to you!",
+});
 
 const ScaffoldEthApp = ({ children }: { children: React.ReactNode }) => {
   return (

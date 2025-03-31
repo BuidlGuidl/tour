@@ -110,8 +110,8 @@ export default function Home() {
                 <Image
                   src="/assets/airship-3.png"
                   alt="Small Airship"
-                  width={200}
-                  height={200}
+                  width={260}
+                  height={260}
                   className="w-full h-auto"
                 />
               </div>
