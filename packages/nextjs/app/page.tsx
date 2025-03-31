@@ -1,13 +1,24 @@
 "use client";
 
-import { useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 import { Footer } from "~~/components/Footer";
 import { Header } from "~~/components/Header";
 
 export default function Home() {
+  const [scrollY, setScrollY] = useState(0);
+
   const scrollToEvents = useCallback(() => {
     document.getElementById("events-section")?.scrollIntoView({ behavior: "smooth" });
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -23,11 +34,17 @@ export default function Home() {
           quality={100}
         />
       </div>
+
       {/* Hero Section */}
-      <div className="relative z-10">
+      <div className="relative z-10 mx-4 lg:mx-10">
         <Header />
         <div className="hero min-h-[90vh]">
-          <div className="hero-content flex-col lg:flex-row-reverse">
+          <div
+            className="hero-content flex-col lg:flex-row-reverse transition-transform duration-1000 ease-out"
+            style={{
+              transform: `translateY(${scrollY * -0.05}px)`,
+            }}
+          >
             <div className="lg:w-1/2">
               <Image
                 src="/assets/airship.png"
@@ -54,18 +71,60 @@ export default function Home() {
         </div>
 
         {/* New Map Section */}
-        <div className="container mx-auto px-4 py-20">
+        <div className="container mx-auto px-4 lg:py-20 py-10">
           <div className="flex flex-col items-center">
             <h2 className="text-4xl font-bold text-center mb-10">Upcoming Locations</h2>
-            <div className="relative w-full max-w-4xl">
+            <div
+              className="relative w-full max-w-4xl transition-transform duration-1000 ease-out"
+              style={{
+                transform: `translateY(${scrollY * -0.03}px)`,
+              }}
+            >
               <Image
-                src="/assets/map.png" // Add your map image to public/assets/
+                src="/assets/map.png"
                 alt="Tour Map"
                 width={1200}
                 height={800}
-                className="w-full h-auto"
+                className="w-full h-auto mt-5"
                 sizes="(max-width: 1200px) 100vw, 1200px"
               />
+              {/* Small Airship */}
+              <div
+                className="absolute bottom-22 lg:bottom-3 right-5 w-24 lg:w-32 transition-transform duration-1000 ease-out"
+                style={{
+                  transform: `translateY(${scrollY * -0.05}px)`,
+                }}
+              >
+                <Image
+                  src="/assets/airship.png"
+                  alt="Small Airship"
+                  width={200}
+                  height={200}
+                  className="w-full h-auto"
+                />
+              </div>
+              {/* Kansas Marker */}
+              <div className="absolute" style={{ left: "24%", top: "38%" }}>
+                <div className="w-3 h-3 bg-white rounded-full relative">
+                  <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-1 whitespace-nowrap">
+                    <div className="bg-white px-3 py-1 rounded-full font-ppwriter text-black relative">
+                      Kansas
+                      <div className="absolute w-2 h-2 bg-white rotate-45 -bottom-1 left-1/2 -translate-x-1/2"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* Taipei Marker */}
+              <div className="absolute" style={{ left: "75%", top: "46%" }}>
+                <div className="w-3 h-3 bg-white rounded-full relative">
+                  <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-1 whitespace-nowrap">
+                    <div className="bg-white px-3 py-1 rounded-full font-ppwriter text-black relative">
+                      Taipei
+                      <div className="absolute w-2 h-2 bg-white rotate-45 -bottom-1 left-1/2 -translate-x-1/2"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -76,7 +135,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Event Card 1 */}
             <div className="rounded-[24px] overflow-hidden bg-white shadow-lg max-w-sm mx-auto w-full transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-              <div className="p-6 bg-sky-200 rounded-t-[24px] h-40">
+              <div className="p-6 bg-[#f5ce81] rounded-t-[24px] h-40">
                 <div className="text-lg">Mar 9</div>
                 <h3 className="font-bold text-[24px] leading-7 mt-1">Virtual Office Hours</h3>
                 <p className="text-gray-700 m-0 p-0">KU Blockchain Club</p>
@@ -88,7 +147,7 @@ export default function Home() {
 
             {/* Event Card 2 */}
             <div className="rounded-[24px] overflow-hidden bg-white shadow-lg max-w-sm mx-auto w-full transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-              <div className="p-6 bg-sky-200 rounded-t-[24px] h-40">
+              <div className="p-6 bg-[#f5ce81] rounded-t-[24px] h-40">
                 <div className="text-lg">Apr 1</div>
                 <h3 className="font-bold text-[24px] leading-7 mt-1">Speedrun Ethereum Workshop</h3>
                 <p className="text-gray-700 m-0 p-0">ETHTaipei</p>
@@ -103,7 +162,7 @@ export default function Home() {
 
             {/* Event Card 3 */}
             <div className="rounded-[24px] overflow-hidden bg-white shadow-lg max-w-sm mx-auto w-full transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-              <div className="p-6 bg-sky-200 rounded-t-[24px] h-40">
+              <div className="p-6 bg-[#f5ce81] rounded-t-[24px] h-40">
                 <div className="text-lg">Coming Soon...</div>
                 <h3 className="font-bold text-[24px] leading-7 mt-1">Your University Here</h3>
                 <p className="text-gray-700 m-0 p-0"></p>
@@ -113,7 +172,7 @@ export default function Home() {
                   We are traveling all over the world to bring Ethereum education to you!
                 </p>
                 <button
-                  className="bg-sky-200 text-gray-800 px-6 py-2 rounded-[32px] hover:bg-sky-300 transition-colors font-ppwriter"
+                  className="bg-[#f5ce81] text-gray-800 px-6 py-2 rounded-[32px] hover:bg-[#f3d494] transition-colors font-ppwriter"
                   onClick={() => window.open("https://telegram.me/austingriffith", "_blank")}
                 >
                   Message Austin on Telegram
