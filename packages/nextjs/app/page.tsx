@@ -28,7 +28,16 @@ export default function Home() {
           src="/assets/background.png"
           alt="Background"
           fill
-          className="object-contain object-top"
+          className="hidden md:block object-contain object-top"
+          priority
+          sizes="100vw"
+          quality={100}
+        />
+        <Image
+          src="/assets/mobile-bg.png"
+          alt="Background Mobile"
+          fill
+          className="block md:hidden object-contain object-top"
           priority
           sizes="100vw"
           quality={100}
