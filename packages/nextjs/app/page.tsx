@@ -40,7 +40,10 @@ export default function Home() {
             <div className="lg:w-1/2">
               <h1 className="text-6xl lg:text-7xl font-bold text-black">Ethereum on Tour</h1>
               <p className="py-6 text-black">Bringing Ethereum curriculum, tools, and mentorship to you!</p>
-              <button className="btn btn-primary bg-sky-200 hover:bg-sky-300 border-none" onClick={scrollToEvents}>
+              <button
+                className="btn btn-primary bg-sky-200 hover:bg-sky-300 border-none font-ppwriter"
+                onClick={scrollToEvents}
+              >
                 Follow our next dates ↓
               </button>
             </div>
@@ -66,7 +69,7 @@ export default function Home() {
 
         {/* Events Section */}
         <div id="events-section" className="container mx-auto px-4 py-20">
-          <h2 className="text-4xl font-bold mb-12">Next events:</h2>
+          <h2 className="text-4xl font-bold mb-12 font-ppwriter">Next events:</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Event Card 1 */}
             <div className="rounded-[24px] overflow-hidden bg-white shadow-lg">
@@ -107,7 +110,7 @@ export default function Home() {
                   We are traveling all over the world to bring Ethereum education to you!
                 </p>
                 <button
-                  className="bg-sky-200 text-gray-800 px-6 py-2 rounded-[32px] hover:bg-sky-300 transition-colors"
+                  className="bg-sky-200 text-gray-800 px-6 py-2 rounded-[32px] hover:bg-sky-300 transition-colors font-ppwriter"
                   onClick={() => window.open("https://telegram.me/austingriffith", "_blank")}
                 >
                   Message Austin on Telegram
