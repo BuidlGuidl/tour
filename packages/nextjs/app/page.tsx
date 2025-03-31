@@ -54,14 +54,14 @@ export default function Home() {
               transform: `translateY(${scrollY * -0.05}px)`,
             }}
           >
-            <div className="lg:w-1/2">
+            <div className="lg:w-2/3">
               <Image
-                src="/assets/airship.png"
+                src="/assets/airship-2.png"
                 alt="Airship"
-                width={1000}
-                height={1000}
+                width={1200}
+                height={1200}
                 className=""
-                sizes="(max-width: 768px) 100vw, 50vw"
+                sizes="(max-width: 1000px) 100vw, 50vw"
               />
             </div>
             <div className="lg:w-1/2">
@@ -108,7 +108,7 @@ export default function Home() {
                 }}
               >
                 <Image
-                  src="/assets/airship.png"
+                  src="/assets/airship-3.png"
                   alt="Small Airship"
                   width={200}
                   height={200}

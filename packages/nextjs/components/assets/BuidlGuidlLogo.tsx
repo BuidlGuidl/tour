@@ -1,4 +1,4 @@
-export const BuidlGuidlLogo = ({ className }: { className: string }) => {
+export const BuidlGuidlLogo = () => {
   return (
     <svg fill="none" height="20" viewBox="0 0 31 28" width="24" xmlns="http://www.w3.org/2000/svg">
       <g fill="#000000">
