@@ -38,10 +38,12 @@ export default function Home() {
               />
             </div>
             <div className="lg:w-1/2">
-              <h1 className="text-6xl lg:text-7xl font-bold text-black">Ethereum on Tour</h1>
+              <h1 className="text-6xl lg:text-7xl font-bold text-black">
+                Ethereum <br /> on Tour
+              </h1>
               <p className="py-6 text-black">Bringing Ethereum curriculum, tools, and mentorship to you!</p>
               <button
-                className="btn btn-primary bg-sky-200 hover:bg-sky-300 border-none font-ppwriter"
+                className="bg-sky-200 hover:bg-sky-300 text-gray-800 px-6 py-2 rounded-[32px] border-none font-ppwriter font-normal"
                 onClick={scrollToEvents}
               >
                 Follow our next dates ↓
