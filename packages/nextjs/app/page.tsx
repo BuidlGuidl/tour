@@ -65,6 +65,9 @@ export default function Home() {
               />
             </div>
             <div className="lg:w-1/2">
+              <div className="mb-4">
+                <Image src="/assets/eth-symbol.svg" alt="Ethereum Logo" width={40} height={40} className="opacity-80" />
+              </div>
               <h1 className="text-6xl lg:text-7xl font-bold text-black">
                 Ethereum <br /> on Tour
               </h1>
