@@ -5,24 +5,6 @@ import Image from "next/image";
 import { Footer } from "~~/components/Footer";
 import { Header } from "~~/components/Header";
 
-<head>
-  <title>Ethereum on Tour</title>
-  <meta name="title" content="Ethereum on Tour" />
-  <meta name="description" content="Bringing Ethereum curriculum, tools, and mentorship to you!" />
-
-  {/* Open Graph / Facebook */}
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Ethereum on Tour" />
-  <meta property="og:description" content="Bringing Ethereum curriculum, tools, and mentorship to you!" />
-  <meta property="og:image" content="/assets/thumbnail.png" />
-
-  {/* Twitter */}
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:title" content="Ethereum on Tour" />
-  <meta property="twitter:description" content="Bringing Ethereum curriculum, tools, and mentorship to you!" />
-  <meta property="twitter:image" content="/assets/thumbnail.png" />
-</head>;
-
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
 
