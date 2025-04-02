@@ -2,8 +2,6 @@
 
 import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
-import { Footer } from "~~/components/Footer";
-import { Header } from "~~/components/Header";
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
@@ -23,7 +21,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen relative">
-      <div className="absolute inset-0 -top-[20px] bg-[#FFE7B5]">
+      <div className="absolute inset-0 -top-[75px] bg-[#FFE7B5]">
         <Image
           src="/assets/background.png"
           alt="Background"
@@ -46,7 +44,6 @@ export default function Home() {
 
       {/* Hero Section */}
       <div className="relative z-10 mx-4 lg:mx-10">
-        <Header />
         <div className="hero min-h-[90vh]">
           <div
             className="hero-content flex-col lg:flex-row-reverse transition-transform duration-1000 ease-out"
@@ -193,7 +190,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <Footer />
       </div>
     </div>
   );
