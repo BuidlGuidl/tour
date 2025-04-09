@@ -182,9 +182,21 @@ export default function Home() {
                 </p>
                 <button
                   className="bg-[#f5ce81] text-gray-800 px-6 py-2 rounded-[32px] hover:bg-[#f3d494] transition-colors font-ppwriter"
-                  onClick={() => window.open("https://telegram.me/austingriffith", "_blank")}
+                  onClick={() => (window.location.href = "mailto:university@ethereum.foundation")}
                 >
-                  Message Austin on Telegram
+                  Email us!
+                </button>
+                <button
+                  className="m-2 bg-[#f5ce81] text-gray-800 px-6 py-2 rounded-[32px] hover:bg-[#f3d494] transition-colors font-ppwriter"
+                  onClick={() =>
+                    window.open(
+                      "https://cryptpad.fr/form/#/2/form/view/RQme15gwpaycGeocic47okNWlJj6q-FcxVwL7gKncXI/",
+                      "_blank",
+                      "noopener,noreferrer",
+                    )
+                  }
+                >
+                  Sign up!
                 </button>
               </div>
             </div>
