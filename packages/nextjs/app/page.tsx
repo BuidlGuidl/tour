@@ -191,7 +191,7 @@ export default function Home() {
               <div className="p-6 bg-[#f5ce81] rounded-t-[24px] h-40">
                 <div className="text-lg">Mar 9</div>
                 <h3 className="font-bold text-[24px] leading-7 mt-1">Virtual Office Hours</h3>
-                <p className="text-gray-700 m-0 p-0">KU Blockchain Club</p>
+                <p className="text-gray-700 m-0 p-0">Kansas University Blockchain Club</p>
               </div>
               <div className="p-6">
                 <p className="text-gray-600 mb-6 mt-0">Open office hours on Zoom with the KU Blockchain Club.</p>
@@ -218,7 +218,7 @@ export default function Home() {
               <div className="p-6 bg-[#f5ce81] rounded-t-[24px] h-40">
                 <div className="text-lg">Apr 16</div>
                 <h3 className="font-bold text-[24px] leading-7 mt-1">In-Person Office Hours</h3>
-                <p className="text-gray-700 m-0 p-0">CU Boulder</p>
+                <p className="text-gray-700 m-0 p-0">Colorado University Boulder</p>
               </div>
               <div className="p-6">
                 <p className="text-gray-600 mb-6 mt-0"> Open office hours IRL at CU Boulder.</p>
@@ -260,7 +260,7 @@ export default function Home() {
               <div className="p-6 bg-[#f5ce81] rounded-t-[24px] h-40">
                 <div className="text-lg">Apr 24</div>
                 <h3 className="font-bold text-[24px] leading-7 mt-1">Virtual Speedrun Ethereum Workshop</h3>
-                <p className="text-gray-700 m-0 p-0">University of Souther California</p>
+                <p className="text-gray-700 m-0 p-0">University of Southern California</p>
               </div>
               <div className="p-6">
                 <p className="text-gray-600 mb-6 mt-0">
