@@ -3,6 +3,30 @@
 import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 
+type MarkerProps = {
+  left: string;
+  top: string;
+  label: string;
+};
+
+function Marker({ left, top, label }: MarkerProps) {
+  const [showLabel, setShowLabel] = useState(false);
+
+  return (
+    <div className="absolute cursor-pointer" style={{ left, top }} onClick={() => setShowLabel(!showLabel)}>
+      <div className="w-4 h-4 bg-red-500 rounded-full border-2 border-white shadow-md" />
+      {showLabel && (
+        <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 whitespace-nowrap z-20">
+          <div className="bg-white px-3 py-1 rounded-full font-ppwriter text-black shadow-lg relative">
+            {label}
+            <div className="absolute w-2 h-2 bg-white rotate-45 -bottom-1 left-1/2 -translate-x-1/2" />
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
 
@@ -112,72 +136,14 @@ export default function Home() {
                   className="w-full h-auto"
                 />
               </div>
-              {/* Kansas Marker */}
-              <div className="absolute" style={{ left: "24%", top: "39%" }}>
-                <div className="w-3 h-3 bg-white rounded-full relative">
-                  <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-1 whitespace-nowrap">
-                    <div className="bg-white px-3 py-1 rounded-full font-ppwriter text-black relative">
-                      Kansas
-                      <div className="absolute w-2 h-2 bg-white rotate-45 -bottom-1 left-1/2 -translate-x-1/2"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* Colorado Marker */}
-              <div className="absolute" style={{ left: "22%", top: "39%" }}>
-                <div className="w-3 h-3 bg-white rounded-full relative">
-                  <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-1 whitespace-nowrap">
-                    <div className="bg-white px-3 py-1 rounded-full font-ppwriter text-black relative">
-                      Colorado
-                      <div className="absolute w-2 h-2 bg-white rotate-45 -bottom-1 left-1/2 -translate-x-1/2"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* Oxford Marker */}
-              <div className="absolute" style={{ left: "52%", top: "27%" }}>
-                <div className="w-3 h-3 bg-white rounded-full relative">
-                  <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-1 whitespace-nowrap">
-                    <div className="bg-white px-3 py-1 rounded-full font-ppwriter text-black relative">
-                      Oxford
-                      <div className="absolute w-2 h-2 bg-white rotate-45 -bottom-1 left-1/2 -translate-x-1/2"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* Illinois Marker */}
-              <div className="absolute" style={{ left: "27%", top: "35%" }}>
-                <div className="w-3 h-3 bg-white rounded-full relative">
-                  <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-1 whitespace-nowrap">
-                    <div className="bg-white px-3 py-1 rounded-full font-ppwriter text-black relative">
-                      Illinois
-                      <div className="absolute w-2 h-2 bg-white rotate-45 -bottom-1 left-1/2 -translate-x-1/2"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* Los Angeles Marker */}
-              <div className="absolute" style={{ left: "20%", top: "41%" }}>
-                <div className="w-3 h-3 bg-white rounded-full relative">
-                  <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-1 whitespace-nowrap">
-                    <div className="bg-white px-3 py-1 rounded-full font-ppwriter text-black relative">
-                      Los Angeles
-                      <div className="absolute w-2 h-2 bg-white rotate-45 -bottom-1 left-1/2 -translate-x-1/2"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* Taipei Marker */}
-              <div className="absolute" style={{ left: "75%", top: "46%" }}>
-                <div className="w-3 h-3 bg-white rounded-full relative">
-                  <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-1 whitespace-nowrap">
-                    <div className="bg-white px-3 py-1 rounded-full font-ppwriter text-black relative">
-                      Taipei
-                      <div className="absolute w-2 h-2 bg-white rotate-45 -bottom-1 left-1/2 -translate-x-1/2"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+
+              {/* Map Markers */}
+              <Marker left="24%" top="39%" label="Kansas" />
+              <Marker left="22%" top="38%" label="Colorado" />
+              <Marker left="52%" top="27%" label="Oxford" />
+              <Marker left="27%" top="35%" label="Illinois" />
+              <Marker left="20%" top="41%" label="Los Angeles" />
+              <Marker left="75%" top="46%" label="Taipei" />
             </div>
           </div>
         </div>
