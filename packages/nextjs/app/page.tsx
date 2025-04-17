@@ -2,30 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
-
-type MarkerProps = {
-  left: string;
-  top: string;
-  label: string;
-};
-
-function Marker({ left, top, label }: MarkerProps) {
-  const [showLabel, setShowLabel] = useState(false);
-
-  return (
-    <div className="absolute cursor-pointer" style={{ left, top }} onClick={() => setShowLabel(!showLabel)}>
-      <div className="w-4 h-4 bg-red-500 rounded-full border-2 border-white shadow-md" />
-      {showLabel && (
-        <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 whitespace-nowrap z-20">
-          <div className="bg-white px-3 py-1 rounded-full font-ppwriter text-black shadow-lg relative">
-            {label}
-            <div className="absolute w-2 h-2 bg-white rotate-45 -bottom-1 left-1/2 -translate-x-1/2" />
-          </div>
-        </div>
-      )}
-    </div>
-  );
-}
+import Marker from "../components/Markers";
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
@@ -138,10 +115,10 @@ export default function Home() {
               </div>
 
               {/* Map Markers */}
-              <Marker left="24%" top="39%" label="Kansas" />
-              <Marker left="22%" top="38%" label="Colorado" />
-              <Marker left="52%" top="27%" label="Oxford" />
-              <Marker left="27%" top="35%" label="Illinois" />
+              <Marker left="24%" top="39%" label="Lawrence" />
+              <Marker left="22%" top="38%" label="Boulder" />
+              <Marker left="46.5%" top="35.5%" label="Oxford" />
+              <Marker left="27%" top="35%" label="Urbana-Champaign" />
               <Marker left="20%" top="41%" label="Los Angeles" />
               <Marker left="75%" top="46%" label="Taipei" />
             </div>
@@ -194,21 +171,6 @@ export default function Home() {
             {/* Event Card 4 */}
             <div className="rounded-[24px] overflow-hidden bg-white shadow-lg max-w-sm mx-auto w-full transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
               <div className="p-6 bg-[#f5ce81] rounded-t-[24px] h-40">
-                <div className="text-lg">Apr 25</div>
-                <h3 className="font-bold text-[24px] leading-7 mt-1">Virtual Speedrun Ethereum Workshop</h3>
-                <p className="text-gray-700 m-0 p-0">Oxford University</p>
-              </div>
-              <div className="p-6">
-                <p className="text-gray-600 mb-6 mt-0">
-                  We&apos;ll show off SpeedRun Ethereum and dive into vibe coding onchain apps and the art of
-                  one-shotting.
-                </p>
-              </div>
-            </div>
-
-            {/* Event Card 5 */}
-            <div className="rounded-[24px] overflow-hidden bg-white shadow-lg max-w-sm mx-auto w-full transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-              <div className="p-6 bg-[#f5ce81] rounded-t-[24px] h-40">
                 <div className="text-lg">Apr 22</div>
                 <h3 className="font-bold text-[24px] leading-7 mt-1">Virtual Speedrun Ethereum Workshop</h3>
                 <p className="text-gray-700 m-0 p-0">University of Illinois, Urbana-Champaign</p>
@@ -221,12 +183,27 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Event Card 6 */}
+            {/* Event Card 5 */}
             <div className="rounded-[24px] overflow-hidden bg-white shadow-lg max-w-sm mx-auto w-full transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
               <div className="p-6 bg-[#f5ce81] rounded-t-[24px] h-40">
                 <div className="text-lg">Apr 24</div>
                 <h3 className="font-bold text-[24px] leading-7 mt-1">Virtual Speedrun Ethereum Workshop</h3>
                 <p className="text-gray-700 m-0 p-0">University of Southern California</p>
+              </div>
+              <div className="p-6">
+                <p className="text-gray-600 mb-6 mt-0">
+                  We&apos;ll show off SpeedRun Ethereum and dive into vibe coding onchain apps and the art of
+                  one-shotting.
+                </p>
+              </div>
+            </div>
+
+            {/* Event Card 6 */}
+            <div className="rounded-[24px] overflow-hidden bg-white shadow-lg max-w-sm mx-auto w-full transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
+              <div className="p-6 bg-[#f5ce81] rounded-t-[24px] h-40">
+                <div className="text-lg">Apr 25</div>
+                <h3 className="font-bold text-[24px] leading-7 mt-1">Virtual Speedrun Ethereum Workshop</h3>
+                <p className="text-gray-700 m-0 p-0">Oxford University</p>
               </div>
               <div className="p-6">
                 <p className="text-gray-600 mb-6 mt-0">
