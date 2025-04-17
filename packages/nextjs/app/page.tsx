@@ -4,30 +4,6 @@ import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 import Marker from "../components/Markers";
 
-type MarkerProps = {
-  left: string;
-  top: string;
-  label: string;
-};
-
-function Marker({ left, top, label }: MarkerProps) {
-  const [showLabel, setShowLabel] = useState(false);
-
-  return (
-    <div className="absolute cursor-pointer" style={{ left, top }} onClick={() => setShowLabel(!showLabel)}>
-      <div className="w-4 h-4 bg-red-500 rounded-full border-2 border-white shadow-md" />
-      {showLabel && (
-        <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 whitespace-nowrap z-20">
-          <div className="bg-white px-3 py-1 rounded-full font-ppwriter text-black shadow-lg relative">
-            {label}
-            <div className="absolute w-2 h-2 bg-white rotate-45 -bottom-1 left-1/2 -translate-x-1/2" />
-          </div>
-        </div>
-      )}
-    </div>
-  );
-}
-
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
 
