@@ -118,9 +118,28 @@ export default function Home() {
               <Marker left="24%" top="39%" label="Lawrence" />
               <Marker left="22%" top="38%" label="Boulder" />
               <Marker left="46.5%" top="35.5%" label="Oxford" />
-              <Marker left="27%" top="35%" label="Urbana-Champaign" />
               <Marker left="20%" top="41%" label="Los Angeles" />
               <Marker left="75%" top="46%" label="Taipei" />
+              <Marker left="50.5%" top="36.9%" label="Prague" />
+              <Marker left="19.2%" top="42%" label="San Francisco" />
+              <Marker left="30.3%" top="39.5%" label="New York" />
+              <Marker left="31.5%" top="38.3%" label="Boston" />
+              <Marker left="48.5%" top="39.3%" label="Cannes" />
+              <Marker left="24.3%" top="43.7%" label="Austin" />
+              <Marker left="49.7%" top="37%" label="Munich" />
+              <Marker left="65.3%" top="46.7%" label="New Delhi" />
+              <Marker left="49.8%" top="35.8%" label="Berlin" />
+              <Marker left="53.2%" top="38.7%" label="Romania" />
+              <Marker left="28.8%" top="39.5%" label="Pittsburgh" />
+              <Marker left="34.5%" top="59%" label="Brazil" />
+              <Marker left="52%" top="36%" label="Warsaw" />
+              <Marker left="52.2%" top="39%" label="Belgrade" />
+              <Marker left="19%" top="41%" label="Berkeley" />
+              <Marker left="19.3%" top="37.4%" label="Seattle" />
+              <Marker left="26.7%" top="39.4%" label="Chicago" />
+              <Marker left="26.6%" top="40.5%" label="Urbana-Champaign" />
+              <Marker left="28%" top="39.2%" label="Ann Arbor" />
+              <Marker left="32%" top="69%" label="Argentina" />
             </div>
           </div>
         </div>
