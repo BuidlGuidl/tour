@@ -140,6 +140,7 @@ export default function Home() {
               <Marker left="26.7%" top="39.4%" label="Chicago" color="yellow" />
               <Marker left="26.6%" top="40.5%" label="Urbana-Champaign" color="yellow" />
               <Marker left="28%" top="39.2%" label="Ann Arbor" color="yellow" />
+              <Marker left="68.2%" top="46.5%" label="Bhutan" color="yellow" />
             </div>
           </div>
         </div>
