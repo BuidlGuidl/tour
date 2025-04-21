@@ -129,11 +129,11 @@ export default function Home() {
               <Marker left="49.7%" top="37%" label="Munich" />
               <Marker left="65.3%" top="46.7%" label="New Delhi" />
               <Marker left="49.8%" top="35.8%" label="Berlin" />
-              <Marker left="53.2%" top="38.7%" label="Romania" />
+              <Marker left="53.2%" top="38.7%" label="Romania" color="yellow" />
               <Marker left="28.8%" top="39.5%" label="Pittsburgh" />
               <Marker left="34.5%" top="59%" label="Brazil" />
               <Marker left="52%" top="36%" label="Warsaw" />
-              <Marker left="52.2%" top="39%" label="Belgrade" />
+              <Marker left="52.2%" top="39%" label="Belgrade" color="yellow" />
               <Marker left="19%" top="41%" label="Berkeley" />
               <Marker left="32%" top="69%" label="Argentina" />
               <Marker left="19.3%" top="37.4%" label="Seattle" color="yellow" />
