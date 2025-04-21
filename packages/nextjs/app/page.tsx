@@ -119,7 +119,7 @@ export default function Home() {
               <Marker left="22%" top="38%" label="Boulder" />
               <Marker left="46.5%" top="35.5%" label="Oxford" />
               <Marker left="20%" top="41%" label="Los Angeles" />
-              <Marker left="75%" top="46%" label="Taipei" />
+              <Marker left="75%" top="47%" label="Taipei" />
               <Marker left="50.5%" top="36.9%" label="Prague" />
               <Marker left="19.2%" top="42%" label="San Francisco" />
               <Marker left="30.3%" top="39.5%" label="New York" />
