@@ -6,13 +6,21 @@ type MarkerProps = {
   left: string;
   top: string;
   label: string;
+  color?: "green" | "yellow";
 };
 
-const Marker: React.FC<MarkerProps> = ({ left, top, label }) => {
+const Marker: React.FC<MarkerProps> = ({ left, top, label, color = "green" }) => {
+  const gradientClasses = {
+    green: "from-green-500 to-emerald-500 shadow-green-300",
+    yellow: "from-yellow-400 to-amber-500 shadow-yellow-300",
+  };
+
   return (
     <div className="absolute group cursor-pointer" style={{ left, top }}>
       {/* Fancy pin shape with shadow and glow */}
-      <div className="w-4 h-4 bg-gradient-to-br from-red-500 to-pink-500 rounded-full border-[3px] border-white shadow-md shadow-red-300 animate-pulse" />
+      <div
+        className={`w-4 h-4 bg-gradient-to-br ${gradientClasses[color]} rounded-full border-[3px] border-white shadow-md animate-pulse`}
+      />
 
       {/* Tooltip on hover */}
       <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 whitespace-nowrap z-20 hidden group-hover:block">

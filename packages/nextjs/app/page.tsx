@@ -135,11 +135,11 @@ export default function Home() {
               <Marker left="52%" top="36%" label="Warsaw" />
               <Marker left="52.2%" top="39%" label="Belgrade" />
               <Marker left="19%" top="41%" label="Berkeley" />
-              <Marker left="19.3%" top="37.4%" label="Seattle" />
-              <Marker left="26.7%" top="39.4%" label="Chicago" />
-              <Marker left="26.6%" top="40.5%" label="Urbana-Champaign" />
-              <Marker left="28%" top="39.2%" label="Ann Arbor" />
               <Marker left="32%" top="69%" label="Argentina" />
+              <Marker left="19.3%" top="37.4%" label="Seattle" color="yellow" />
+              <Marker left="26.7%" top="39.4%" label="Chicago" color="yellow" />
+              <Marker left="26.6%" top="40.5%" label="Urbana-Champaign" color="yellow" />
+              <Marker left="28%" top="39.2%" label="Ann Arbor" color="yellow" />
             </div>
           </div>
         </div>
