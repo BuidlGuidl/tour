@@ -6,6 +6,11 @@ import Marker from "../components/Markers";
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
+  const [textColor, setTextColor] = useState("text-[#392b18]");
+
+  const changeTextColor = useCallback((color: string) => {
+    setTextColor(color);
+  }, []);
 
   const scrollToEvents = useCallback(() => {
     document.getElementById("events-section")?.scrollIntoView({ behavior: "smooth" });
@@ -64,14 +69,14 @@ export default function Home() {
             </div>
             <div className="lg:w-1/2">
               <div className="mb-4">
-                <Image src="/assets/eth-symbol.svg" alt="Ethereum Logo" width={40} height={40} className="opacity-80" />
+                <Image src="/assets/eth-symbol.svg" alt="Ethereum Logo" width={40} height={40} />
               </div>
-              <h1 className="text-6xl lg:text-7xl font-bold text-black">
+              <h1 className={`text-6xl lg:text-7xl font-bold ${textColor}`}>
                 Ethereum <br /> on Tour
               </h1>
-              <p className="py-3 text-xl text-black">Bringing Ethereum curriculum, tools, and mentorship to you!</p>
+              <p className={`py-3 text-xl ${textColor}`}>Bringing Ethereum curriculum, tools, and mentorship to you!</p>
               <button
-                className="bg-sky-200 hover:bg-sky-300 text-gray-800 px-6 py-2 rounded-[32px] border-none font-ppwriter font-normal"
+                className="bg-sky-200 hover:bg-sky-300 ${textColor} px-6 py-2 rounded-[32px] border-none font-ppwriter font-normal"
                 onClick={scrollToEvents}
               >
                 Follow our next dates ↓
@@ -83,7 +88,7 @@ export default function Home() {
         {/* New Map Section */}
         <div className="container mx-auto px-4 lg:py-20 py-10">
           <div className="flex flex-col items-center">
-            <h2 className="text-4xl font-bold text-center mb-10">Upcoming Locations</h2>
+            <h2 className={`text-4xl font-bold text-center mb-10 ${textColor}`}>Upcoming Locations</h2>
             <div
               className="relative w-full max-w-4xl transition-transform duration-1000 ease-out"
               style={{
@@ -147,29 +152,29 @@ export default function Home() {
 
         {/* Events Section */}
         <div id="events-section" className="container mx-auto px-4 py-12 mb-16">
-          <h2 className="text-4xl font-bold mb-8 font-ppwriter">Next events:</h2>
+          <h2 className={`text-4xl font-bold mb-8 font-ppwriter ${textColor}`}>Next events:</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Event Card 1 */}
             <div className="rounded-[24px] overflow-hidden bg-white shadow-lg max-w-sm mx-auto w-full transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
               <div className="p-6 bg-[#f5ce81] rounded-t-[24px] h-40">
-                <div className="text-lg">Mar 9</div>
-                <h3 className="font-bold text-[24px] leading-7 mt-1">Virtual Office Hours</h3>
-                <p className="text-gray-700 m-0 p-0">Kansas University Blockchain Club</p>
+                <div className={`text-lg ${textColor}`}>Mar 9</div>
+                <h3 className={`font-bold text-[24px] leading-7 mt-1 ${textColor}`}>Virtual Office Hours</h3>
+                <p className={`m-0 p-0 ${textColor}`}>Kansas University Blockchain Club</p>
               </div>
               <div className="p-6">
-                <p className="text-gray-600 mb-6 mt-0">Open office hours on Zoom with the KU Blockchain Club.</p>
+                <p className={`mb-6 mt-0 ${textColor}`}>Open office hours on Zoom with the KU Blockchain Club.</p>
               </div>
             </div>
 
             {/* Event Card 2 */}
             <div className="rounded-[24px] overflow-hidden bg-white shadow-lg max-w-sm mx-auto w-full transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
               <div className="p-6 bg-[#f5ce81] rounded-t-[24px] h-40">
-                <div className="text-lg">Apr 1</div>
-                <h3 className="font-bold text-[24px] leading-7 mt-1">Speedrun Ethereum Workshop</h3>
-                <p className="text-gray-700 m-0 p-0">ETHTaipei</p>
+                <div className={`text-lg ${textColor}`}>Apr 1</div>
+                <h3 className={`font-bold text-[24px] leading-7 mt-1 ${textColor}`}>Speedrun Ethereum Workshop</h3>
+                <p className={`m-0 p-0 ${textColor}`}>ETHTaipei</p>
               </div>
               <div className="p-6">
-                <p className="text-gray-600 mb-6 mt-0">
+                <p className={`mb-6 mt-0 ${textColor}`}>
                   We&apos;ll show off SpeedRun Ethereum and dive into vibe coding onchain apps and the art of
                   one-shotting.
                 </p>
@@ -179,24 +184,26 @@ export default function Home() {
             {/* Event Card 3 */}
             <div className="rounded-[24px] overflow-hidden bg-white shadow-lg max-w-sm mx-auto w-full transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
               <div className="p-6 bg-[#f5ce81] rounded-t-[24px] h-40">
-                <div className="text-lg">Apr 16</div>
-                <h3 className="font-bold text-[24px] leading-7 mt-1">In-Person Office Hours</h3>
-                <p className="text-gray-700 m-0 p-0">Colorado University Boulder</p>
+                <div className={`text-lg ${textColor}`}>Apr 16</div>
+                <h3 className={`font-bold text-[24px] leading-7 mt-1 ${textColor}`}>In-Person Office Hours</h3>
+                <p className={`m-0 p-0 ${textColor}`}>Colorado University Boulder</p>
               </div>
               <div className="p-6">
-                <p className="text-gray-600 mb-6 mt-0"> Open office hours IRL at CU Boulder.</p>
+                <p className={`mb-6 mt-0 ${textColor}`}> Open office hours IRL at CU Boulder.</p>
               </div>
             </div>
 
             {/* Event Card 4 */}
             <div className="rounded-[24px] overflow-hidden bg-white shadow-lg max-w-sm mx-auto w-full transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
               <div className="p-6 bg-[#f5ce81] rounded-t-[24px] h-40">
-                <div className="text-lg">Apr 22</div>
-                <h3 className="font-bold text-[24px] leading-7 mt-1">Virtual Speedrun Ethereum Workshop</h3>
-                <p className="text-gray-700 m-0 p-0">University of Illinois, Urbana-Champaign</p>
+                <div className={`text-lg ${textColor}`}>Apr 22</div>
+                <h3 className={`font-bold text-[24px] leading-7 mt-1 ${textColor}`}>
+                  Virtual Speedrun Ethereum Workshop
+                </h3>
+                <p className={`m-0 p-0 ${textColor}`}>University of Illinois, Urbana-Champaign</p>
               </div>
               <div className="p-6">
-                <p className="text-gray-600 mb-6 mt-0">
+                <p className={`mb-6 mt-0 ${textColor}`}>
                   We&apos;ll show off SpeedRun Ethereum and dive into vibe coding onchain apps and the art of
                   one-shotting.
                 </p>
@@ -206,12 +213,14 @@ export default function Home() {
             {/* Event Card 5 */}
             <div className="rounded-[24px] overflow-hidden bg-white shadow-lg max-w-sm mx-auto w-full transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
               <div className="p-6 bg-[#f5ce81] rounded-t-[24px] h-40">
-                <div className="text-lg">Apr 24</div>
-                <h3 className="font-bold text-[24px] leading-7 mt-1">Virtual Speedrun Ethereum Workshop</h3>
-                <p className="text-gray-700 m-0 p-0">University of Southern California</p>
+                <div className={`text-lg ${textColor}`}>Apr 24</div>
+                <h3 className={`font-bold text-[24px] leading-7 mt-1 ${textColor}`}>
+                  Virtual Speedrun Ethereum Workshop
+                </h3>
+                <p className={`m-0 p-0 ${textColor}`}>University of Southern California</p>
               </div>
               <div className="p-6">
-                <p className="text-gray-600 mb-6 mt-0">
+                <p className={`mb-6 mt-0 ${textColor}`}>
                   We&apos;ll show off SpeedRun Ethereum and dive into vibe coding onchain apps and the art of
                   one-shotting.
                 </p>
@@ -221,12 +230,14 @@ export default function Home() {
             {/* Event Card 6 */}
             <div className="rounded-[24px] overflow-hidden bg-white shadow-lg max-w-sm mx-auto w-full transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
               <div className="p-6 bg-[#f5ce81] rounded-t-[24px] h-40">
-                <div className="text-lg">Apr 25</div>
-                <h3 className="font-bold text-[24px] leading-7 mt-1">Virtual Speedrun Ethereum Workshop</h3>
-                <p className="text-gray-700 m-0 p-0">Oxford University</p>
+                <div className={`text-lg ${textColor}`}>Apr 25</div>
+                <h3 className={`font-bold text-[24px] leading-7 mt-1 ${textColor}`}>
+                  Virtual Speedrun Ethereum Workshop
+                </h3>
+                <p className={`m-0 p-0 ${textColor}`}>Oxford University</p>
               </div>
               <div className="p-6">
-                <p className="text-gray-600 mb-6 mt-0">
+                <p className={`mb-6 mt-0 ${textColor}`}>
                   We&apos;ll show off SpeedRun Ethereum and dive into vibe coding onchain apps and the art of
                   one-shotting.
                 </p>
@@ -236,22 +247,22 @@ export default function Home() {
             {/* Event Card 7 */}
             <div className="rounded-[24px] overflow-hidden bg-white shadow-lg max-w-sm mx-auto w-full transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
               <div className="p-6 bg-[#f5ce81] rounded-t-[24px] h-40">
-                <div className="text-lg">Coming Soon...</div>
-                <h3 className="font-bold text-[24px] leading-7 mt-1">Your University Here</h3>
-                <p className="text-gray-700 m-0 p-0"></p>
+                <div className={`text-lg ${textColor}`}>Coming Soon...</div>
+                <h3 className={`font-bold text-[24px] leading-7 mt-1 ${textColor}`}>Your University Here</h3>
+                <p className={`m-0 p-0 ${textColor}`}></p>
               </div>
               <div className="p-6">
-                <p className="text-gray-600 mb-6 mt-0">
+                <p className={`mb-6 mt-0 ${textColor}`}>
                   We are traveling all over the world to bring Ethereum education to you!
                 </p>
                 <button
-                  className="bg-[#f5ce81] text-gray-800 px-6 py-2 rounded-[32px] hover:bg-[#f3d494] transition-colors font-ppwriter"
+                  className="bg-[#f5ce81] ${textColor} px-6 py-2 rounded-[32px] hover:bg-[#f3d494] transition-colors font-ppwriter"
                   onClick={() => (window.location.href = "mailto:university@ethereum.foundation")}
                 >
                   Email us!
                 </button>
                 <button
-                  className="m-2 bg-[#f5ce81] text-gray-800 px-6 py-2 rounded-[32px] hover:bg-[#f3d494] transition-colors font-ppwriter"
+                  className="m-2 bg-[#f5ce81] ${textColor} px-6 py-2 rounded-[32px] hover:bg-[#f3d494] transition-colors font-ppwriter"
                   onClick={() =>
                     window.open(
                       "https://cryptpad.fr/form/#/2/form/view/RQme15gwpaycGeocic47okNWlJj6q-FcxVwL7gKncXI/",
