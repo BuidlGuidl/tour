@@ -6,11 +6,7 @@ import Marker from "../components/Markers";
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
-  const [textColor, setTextColor] = useState("text-[#392b18]");
-
-  const changeTextColor = useCallback((color: string) => {
-    setTextColor(color);
-  }, []);
+  const textColor = "text-[#392b18]";
 
   const scrollToEvents = useCallback(() => {
     document.getElementById("events-section")?.scrollIntoView({ behavior: "smooth" });
