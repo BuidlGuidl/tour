@@ -147,6 +147,19 @@ export default function Home() {
               <Marker left="28%" top="39.2%" label="Ann Arbor" color="yellow" />
               <Marker left="68.2%" top="46.5%" label="Bhutan" color="yellow" />
             </div>
+            {/* Map legend */}
+            <div className="flex flex-col items-center mt-3">
+              <div className="flex items-center gap-4">
+                <div className="flex items-center gap-2">
+                  <div className="w-4 h-4 bg-[#fff97f] rounded-full border-[1.3px] border-[#886e4d] shadow-sm shadow-[#a2845ed6]"></div>
+                  <span className={`${textColor} font-ppwriter`}>Possible locations</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-4 h-4 bg-[#90fc90] rounded-full border-[1.3px] border-[#886e4d] shadow-sm shadow-[#a2845ed6]"></div>
+                  <span className={`${textColor} font-ppwriter`}>We&apos;ll be there!</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
