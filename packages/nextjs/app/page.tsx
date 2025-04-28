@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
+import EventCard from "../components/EventCard";
 import Marker from "../components/Markers";
 
 export default function Home() {
@@ -163,127 +164,58 @@ export default function Home() {
         <div id="events-section" className="container mx-auto px-4 py-12 mb-16">
           <h2 className={`text-4xl font-bold mb-8 font-ppwriter ${textColor}`}>Next events:</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Event Card 1 */}
-            <div className="rounded-[24px] overflow-hidden bg-white shadow-lg max-w-sm mx-auto w-full transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-              <div className="p-6 bg-[#f5ce81] rounded-t-[24px] h-40">
-                <div className={`text-lg ${textColor}`}>Mar 9</div>
-                <h3 className={`font-bold text-[24px] leading-7 mt-1 ${textColor}`}>Virtual Office Hours</h3>
-                <p className={`m-0 p-0 ${textColor}`}>Kansas University Blockchain Club</p>
-              </div>
-              <div className="p-6">
-                <p className={`mb-6 mt-0 ${textColor}`}>Open office hours on Zoom with the KU Blockchain Club.</p>
-              </div>
-            </div>
-
-            {/* Event Card 2 */}
-            <div className="rounded-[24px] overflow-hidden bg-white shadow-lg max-w-sm mx-auto w-full transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-              <div className="p-6 bg-[#f5ce81] rounded-t-[24px] h-40">
-                <div className={`text-lg ${textColor}`}>Apr 1</div>
-                <h3 className={`font-bold text-[24px] leading-7 mt-1 ${textColor}`}>Speedrun Ethereum Workshop</h3>
-                <p className={`m-0 p-0 ${textColor}`}>ETHTaipei</p>
-              </div>
-              <div className="p-6">
-                <p className={`mb-6 mt-0 ${textColor}`}>
-                  We&apos;ll show off SpeedRun Ethereum and dive into vibe coding onchain apps and the art of
-                  one-shotting.
-                </p>
-              </div>
-            </div>
-
-            {/* Event Card 3 */}
-            <div className="rounded-[24px] overflow-hidden bg-white shadow-lg max-w-sm mx-auto w-full transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-              <div className="p-6 bg-[#f5ce81] rounded-t-[24px] h-40">
-                <div className={`text-lg ${textColor}`}>Apr 16</div>
-                <h3 className={`font-bold text-[24px] leading-7 mt-1 ${textColor}`}>In-Person Office Hours</h3>
-                <p className={`m-0 p-0 ${textColor}`}>Colorado University Boulder</p>
-              </div>
-              <div className="p-6">
-                <p className={`mb-6 mt-0 ${textColor}`}> Open office hours IRL at CU Boulder.</p>
-              </div>
-            </div>
-
-            {/* Event Card 4 */}
-            <div className="rounded-[24px] overflow-hidden bg-white shadow-lg max-w-sm mx-auto w-full transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-              <div className="p-6 bg-[#f5ce81] rounded-t-[24px] h-40">
-                <div className={`text-lg ${textColor}`}>Apr 22</div>
-                <h3 className={`font-bold text-[24px] leading-7 mt-1 ${textColor}`}>
-                  Virtual Speedrun Ethereum Workshop
-                </h3>
-                <p className={`m-0 p-0 ${textColor}`}>University of Illinois, Urbana-Champaign</p>
-              </div>
-              <div className="p-6">
-                <p className={`mb-6 mt-0 ${textColor}`}>
-                  We&apos;ll show off SpeedRun Ethereum and dive into vibe coding onchain apps and the art of
-                  one-shotting.
-                </p>
-              </div>
-            </div>
-
-            {/* Event Card 5 */}
-            <div className="rounded-[24px] overflow-hidden bg-white shadow-lg max-w-sm mx-auto w-full transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-              <div className="p-6 bg-[#f5ce81] rounded-t-[24px] h-40">
-                <div className={`text-lg ${textColor}`}>Apr 24</div>
-                <h3 className={`font-bold text-[24px] leading-7 mt-1 ${textColor}`}>
-                  Virtual Speedrun Ethereum Workshop
-                </h3>
-                <p className={`m-0 p-0 ${textColor}`}>University of Southern California</p>
-              </div>
-              <div className="p-6">
-                <p className={`mb-6 mt-0 ${textColor}`}>
-                  We&apos;ll show off SpeedRun Ethereum and dive into vibe coding onchain apps and the art of
-                  one-shotting.
-                </p>
-              </div>
-            </div>
-
-            {/* Event Card 6 */}
-            <div className="rounded-[24px] overflow-hidden bg-white shadow-lg max-w-sm mx-auto w-full transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-              <div className="p-6 bg-[#f5ce81] rounded-t-[24px] h-40">
-                <div className={`text-lg ${textColor}`}>Apr 25</div>
-                <h3 className={`font-bold text-[24px] leading-7 mt-1 ${textColor}`}>
-                  Virtual Speedrun Ethereum Workshop
-                </h3>
-                <p className={`m-0 p-0 ${textColor}`}>Oxford University</p>
-              </div>
-              <div className="p-6">
-                <p className={`mb-6 mt-0 ${textColor}`}>
-                  We&apos;ll show off SpeedRun Ethereum and dive into vibe coding onchain apps and the art of
-                  one-shotting.
-                </p>
-              </div>
-            </div>
-
-            {/* Event Card 7 */}
-            <div className="rounded-[24px] overflow-hidden bg-white shadow-lg max-w-sm mx-auto w-full transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-              <div className="p-6 bg-[#f5ce81] rounded-t-[24px] h-40">
-                <div className={`text-lg ${textColor}`}>Coming Soon...</div>
-                <h3 className={`font-bold text-[24px] leading-7 mt-1 ${textColor}`}>Your University Here</h3>
-                <p className={`m-0 p-0 ${textColor}`}></p>
-              </div>
-              <div className="p-6">
-                <p className={`mb-6 mt-0 ${textColor}`}>
-                  We are traveling all over the world to bring Ethereum education to you!
-                </p>
-                <button
-                  className="bg-[#f5ce81] ${textColor} px-6 py-2 rounded-[32px] hover:bg-[#f3d494] transition-colors font-ppwriter"
-                  onClick={() => (window.location.href = "mailto:university@ethereum.foundation")}
-                >
-                  Email us!
-                </button>
-                <button
-                  className="m-2 bg-[#f5ce81] ${textColor} px-6 py-2 rounded-[32px] hover:bg-[#f3d494] transition-colors font-ppwriter"
-                  onClick={() =>
-                    window.open(
-                      "https://cryptpad.fr/form/#/2/form/view/RQme15gwpaycGeocic47okNWlJj6q-FcxVwL7gKncXI/",
-                      "_blank",
-                      "noopener,noreferrer",
-                    )
-                  }
-                >
-                  Sign up!
-                </button>
-              </div>
-            </div>
+            <EventCard
+              date="Mar 9"
+              title="Virtual Office Hours"
+              location="Kansas University Blockchain Club"
+              description="Open office hours on Zoom with the KU Blockchain Club."
+            />
+            <EventCard
+              date="Apr 1"
+              title="Speedrun Ethereum Workshop"
+              location="ETHTaipei"
+              description="We'll show off SpeedRun Ethereum and dive into vibe coding onchain apps and the art of one-shotting."
+            />
+            <EventCard
+              date="Apr 16"
+              title="In-Person Office Hours"
+              location="Colorado University Boulder"
+              description="Open office hours IRL at CU Boulder."
+            />
+            <EventCard
+              date="Apr 22"
+              title="Virtual Speedrun Ethereum Workshop"
+              location="University of Illinois, Urbana-Champaign"
+              description="We'll show off SpeedRun Ethereum and dive into vibe coding onchain apps and the art of one-shotting."
+            />
+            <EventCard
+              date="Apr 24"
+              title="Virtual Speedrun Ethereum Workshop"
+              location="University of Southern California"
+              description="We'll show off SpeedRun Ethereum and dive into vibe coding onchain apps and the art of one-shotting."
+            />
+            <EventCard
+              date="Apr 25"
+              title="Virtual Speedrun Ethereum Workshop"
+              location="Oxford University"
+              description="We'll show off SpeedRun Ethereum and dive into vibe coding onchain apps and the art of one-shotting."
+            />
+            <EventCard
+              date="Coming Soon..."
+              title="Your University Here"
+              location=""
+              description="We are traveling all over the world to bring Ethereum education to you!"
+              buttons={[
+                {
+                  text: "Email us!",
+                  href: "mailto:university@ethereum.foundation",
+                },
+                {
+                  text: "Sign up!",
+                  href: "https://cryptpad.fr/form/#/2/form/view/RQme15gwpaycGeocic47okNWlJj6q-FcxVwL7gKncXI/",
+                },
+              ]}
+            />
           </div>
         </div>
       </div>
