@@ -2,8 +2,8 @@
 
 import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
+import EventCard from "../components/EventCard";
 import Marker from "../components/Markers";
-import EventCard from "./components/EventCard";
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
