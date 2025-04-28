@@ -104,14 +104,14 @@ export default function Home() {
               <div
                 className="absolute bottom-22 lg:bottom-3 right-5 w-24 lg:w-32 transition-transform duration-1000 ease-out"
                 style={{
-                  transform: `translateY(${scrollY * -0.05}px)`,
+                  transform: `translateY(${scrollY * -0.15}px)`,
                 }}
               >
                 <Image
                   src="/assets/airship-3.png"
                   alt="Small Airship"
-                  width={260}
-                  height={260}
+                  width={240}
+                  height={240}
                   className="w-full h-auto"
                 />
               </div>
