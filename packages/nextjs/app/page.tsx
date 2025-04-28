@@ -7,6 +7,7 @@ import EventCard from "./components/EventCard";
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
+  const textColor = "text-[#392b18]";
 
   const scrollToEvents = useCallback(() => {
     document.getElementById("events-section")?.scrollIntoView({ behavior: "smooth" });
@@ -65,14 +66,14 @@ export default function Home() {
             </div>
             <div className="lg:w-1/2">
               <div className="mb-4">
-                <Image src="/assets/eth-symbol.svg" alt="Ethereum Logo" width={40} height={40} className="opacity-80" />
+                <Image src="/assets/eth-symbol.svg" alt="Ethereum Logo" width={40} height={40} />
               </div>
-              <h1 className="text-6xl lg:text-7xl font-bold text-black">
+              <h1 className={`text-6xl lg:text-7xl font-bold ${textColor}`}>
                 Ethereum <br /> on Tour
               </h1>
-              <p className="py-3 text-xl text-black">Bringing Ethereum curriculum, tools, and mentorship to you!</p>
+              <p className={`py-3 text-xl ${textColor}`}>Bringing Ethereum curriculum, tools, and mentorship to you!</p>
               <button
-                className="bg-sky-200 hover:bg-sky-300 text-gray-800 px-6 py-2 rounded-[32px] border-none font-ppwriter font-normal"
+                className="bg-sky-200 hover:bg-sky-300 ${textColor} px-6 py-2 rounded-[32px] border-none font-ppwriter font-normal"
                 onClick={scrollToEvents}
               >
                 Follow our next dates ↓
@@ -84,7 +85,7 @@ export default function Home() {
         {/* New Map Section */}
         <div className="container mx-auto px-4 lg:py-20 py-10">
           <div className="flex flex-col items-center">
-            <h2 className="text-4xl font-bold text-center mb-10">Upcoming Locations</h2>
+            <h2 className={`text-4xl font-bold text-center mb-10 ${textColor}`}>Upcoming Locations</h2>
             <div
               className="relative w-full max-w-4xl transition-transform duration-1000 ease-out"
               style={{
@@ -121,7 +122,7 @@ export default function Home() {
               <Marker left="46.5%" top="35.5%" label="Oxford" />
               <Marker left="20%" top="41%" label="Los Angeles" />
               <Marker left="75%" top="47%" label="Taipei" />
-              <Marker left="50.5%" top="36.9%" label="Prague" />
+              <Marker left="50.5%" top="36.9%" label="Prague" sublabel="ethPrague" />
               <Marker left="19.2%" top="42%" label="San Francisco" />
               <Marker left="30.3%" top="39.5%" label="New York" />
               <Marker left="31.5%" top="38.3%" label="Boston" />
@@ -143,12 +144,25 @@ export default function Home() {
               <Marker left="28%" top="39.2%" label="Ann Arbor" color="yellow" />
               <Marker left="68.2%" top="46.5%" label="Bhutan" color="yellow" />
             </div>
+            {/* Map legend */}
+            <div className="flex flex-col items-center mt-3">
+              <div className="flex items-center gap-4">
+                <div className="flex items-center gap-2">
+                  <div className="w-4 h-4 bg-[#fff97f] rounded-full border-[1.3px] border-[#886e4d] shadow-sm shadow-[#a2845ed6]"></div>
+                  <span className={`${textColor} font-ppwriter`}>Possible locations</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-4 h-4 bg-[#90fc90] rounded-full border-[1.3px] border-[#886e4d] shadow-sm shadow-[#a2845ed6]"></div>
+                  <span className={`${textColor} font-ppwriter`}>We&apos;ll be there!</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Events Section */}
         <div id="events-section" className="container mx-auto px-4 py-12 mb-16">
-          <h2 className="text-4xl font-bold mb-8 font-ppwriter">Next events:</h2>
+          <h2 className={`text-4xl font-bold mb-8 font-ppwriter ${textColor}`}>Next events:</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <EventCard
               date="Mar 9"
