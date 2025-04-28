@@ -1,36 +1,13 @@
-import React from "react";
-
-interface ButtonProps {
-  onClick: () => void;
-  children: React.ReactNode;
-  className?: string;
-}
-
-const Button = ({ onClick, children, className = "" }: ButtonProps) => (
-  <button
-    className={`bg-[#f5ce81] text-gray-800 px-6 py-2 rounded-[32px] hover:bg-[#f3d494] transition-colors font-ppwriter ${className}`}
-    onClick={onClick}
-  >
-    {children}
-  </button>
-);
-
-interface EventCardProps {
+type EventCardProps = {
   date: string;
   title: string;
   location: string;
   description: string;
-  buttons?: {
-    email?: {
-      text: string;
-      onClick: () => void;
-    };
-    signup?: {
-      text: string;
-      onClick: () => void;
-    };
-  };
-}
+  buttons?: Array<{
+    text: string;
+    href: string;
+  }>;
+};
 
 export default function EventCard({ date, title, location, description, buttons }: EventCardProps) {
   return (
@@ -44,8 +21,17 @@ export default function EventCard({ date, title, location, description, buttons 
         <p className="text-gray-600 mb-6 mt-0">{description}</p>
         {buttons && (
           <div className="flex gap-2">
-            {buttons.email && <Button onClick={buttons.email.onClick}>{buttons.email.text}</Button>}
-            {buttons.signup && <Button onClick={buttons.signup.onClick}>{buttons.signup.text}</Button>}
+            {buttons.map(button => (
+              <a
+                key={button.text}
+                className="bg-[#f5ce81] text-gray-800 px-6 py-2 rounded-[32px] hover:bg-[#f3d494] transition-colors font-ppwriter"
+                href={button.href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {button.text}
+              </a>
+            ))}
           </div>
         )}
       </div>

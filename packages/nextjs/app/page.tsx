@@ -205,21 +205,16 @@ export default function Home() {
               title="Your University Here"
               location=""
               description="We are traveling all over the world to bring Ethereum education to you!"
-              buttons={{
-                email: {
+              buttons={[
+                {
                   text: "Email us!",
-                  onClick: () => (window.location.href = "mailto:university@ethereum.foundation"),
+                  href: "mailto:university@ethereum.foundation",
                 },
-                signup: {
+                {
                   text: "Sign up!",
-                  onClick: () =>
-                    window.open(
-                      "https://cryptpad.fr/form/#/2/form/view/RQme15gwpaycGeocic47okNWlJj6q-FcxVwL7gKncXI/",
-                      "_blank",
-                      "noopener,noreferrer",
-                    ),
+                  href: "https://cryptpad.fr/form/#/2/form/view/RQme15gwpaycGeocic47okNWlJj6q-FcxVwL7gKncXI/",
                 },
-              }}
+              ]}
             />
           </div>
         </div>
