@@ -49,7 +49,7 @@ export default function Home() {
       <div className="relative z-10">
         <div className="hero min-h-[90vh] px-6">
           <div
-            className="hero-content flex-col lg:flex-row-reverse transition-transform duration-1000 ease-out"
+            className="hero-content flex-col lg:flex-row-reverse lg:ml-10 transition-transform duration-1000 ease-out"
             style={{
               transform: `translateY(${scrollY * -0.05}px)`,
             }}
@@ -83,7 +83,7 @@ export default function Home() {
         </div>
 
         {/* New Map Section */}
-        <div className="container px-6 lg:py-20 py-10">
+        <div className="container mx-auto px-6 lg:py-20 py-10">
           <div className="flex flex-col items-center">
             <h2 className={`text-4xl font-bold text-center mb-10 ${textColor}`}>Upcoming Locations</h2>
             <div
@@ -161,8 +161,8 @@ export default function Home() {
         </div>
 
         {/* Events Section */}
-        <div id="events-section" className="container px-6 py-12 mb-16">
-          <h2 className={`text-4xl font-bold mb-8 font-ppwriter ${textColor}`}>Next events:</h2>
+        <div id="events-section" className="container mx-auto px-6 py-12 mb-16 flex flex-col items-center">
+          <h2 className={`text-4xl font-bold mb-12 font-ppwriter ${textColor}`}>Next events:</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <EventCard
               date="Mar 9"
