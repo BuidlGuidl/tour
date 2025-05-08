@@ -204,7 +204,7 @@ export default function Home() {
         </div>
 
         {/* CTA Section */}
-        <div className="flex flex-col items-center text-center mx-0 px-6 py-12 mb-16 bg-[#f7d998]">
+        <div className="flex flex-col items-center text-center px-6 py-12 mb-16 bg-[#f7d998]">
           <h2 className={`text-4xl font-bold mb-3 font-ppwriter ${textColor}`}>🗺️ Coming soon to your university</h2>
           <p className={`text-xl ${textColor} mb-8`}>
             We are traveling all over the world to bring Ethereum education to you!
