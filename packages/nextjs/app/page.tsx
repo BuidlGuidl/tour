@@ -47,7 +47,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <div className="relative z-10">
-        <div className="hero min-h-[90vh] mx-4 lg:mx-10">
+        <div className="hero min-h-[90vh] px-6 lg:mx-10">
           <div
             className="hero-content flex-col lg:flex-row-reverse transition-transform duration-1000 ease-out"
             style={{
@@ -83,7 +83,7 @@ export default function Home() {
         </div>
 
         {/* New Map Section */}
-        <div className="container px-4 lg:py-20 py-10 mx-4 lg:mx-10">
+        <div className="container px-6 lg:py-20 py-10 lg:mx-10">
           <div className="flex flex-col items-center">
             <h2 className={`text-4xl font-bold text-center mb-10 ${textColor}`}>Upcoming Locations</h2>
             <div
@@ -161,7 +161,7 @@ export default function Home() {
         </div>
 
         {/* Events Section */}
-        <div id="events-section" className="container px-4 py-12 mb-16 mx-4 lg:mx-10">
+        <div id="events-section" className="container px-6 py-12 mb-16 lg:mx-10">
           <h2 className={`text-4xl font-bold mb-8 font-ppwriter ${textColor}`}>Next events:</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <EventCard
@@ -204,7 +204,7 @@ export default function Home() {
         </div>
 
         {/* CTA Section */}
-        <div className="flex flex-col items-center text-center mx-0 px-0 py-12 mb-16 bg-[#f7d998]">
+        <div className="flex flex-col items-center text-center mx-0 px-6 py-12 mb-16 bg-[#f7d998]">
           <h2 className={`text-4xl font-bold mb-3 font-ppwriter ${textColor}`}>🗺️ Coming soon to your university</h2>
           <p className={`text-xl ${textColor} mb-8`}>
             We are traveling all over the world to bring Ethereum education to you!
