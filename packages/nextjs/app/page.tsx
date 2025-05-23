@@ -136,13 +136,26 @@ export default function Home() {
               <Marker left="34.5%" top="59%" label="Brazil" />
               <Marker left="52%" top="36%" label="Warsaw" />
               <Marker left="52.2%" top="39%" label="Belgrade" color="yellow" />
-              <Marker left="19%" top="41%" label="Berkeley" />
+              <Marker left="19%" top="41%" label="UC Berkeley" />
               <Marker left="32%" top="69%" label="Argentina" />
               <Marker left="19.3%" top="37.4%" label="Seattle" color="yellow" />
               <Marker left="26.7%" top="39.4%" label="Chicago" color="yellow" />
               <Marker left="26.6%" top="40.5%" label="Urbana-Champaign" color="yellow" />
               <Marker left="28%" top="39.2%" label="Ann Arbor" color="yellow" />
               <Marker left="68.2%" top="46.5%" label="Bhutan" color="yellow" />
+              {/* Added 05/23/2025 */}
+              <Marker
+                left="23.7%"
+                top="47.7%"
+                label="Mexico City"
+                sublabel="National Autonomous University of Mexico"
+              />
+              <Marker left="30.3%" top="53.5%" label="Bogotá" sublabel="Xavierian Pontifical University" />
+              <Marker left="49.4%" top="38.9%" label="Milan" sublabel="Bocconi University" />
+              <Marker left="51.6%" top="37.4%" label="Brno University of Technology" />
+              <Marker left="67%" top="47.2%" label="Dhanbadh" sublabel="Indian Institute of Technology" />
+              <Marker left="71%" top="54.8%" label="Singapore" />
+              <Marker left="48.6%" top="38.3%" label="Lausanne" sublabel="Swiss Federal Technology Institute" />
             </div>
             {/* Map legend */}
             <div className="flex flex-col items-center mt-3">
@@ -198,6 +211,61 @@ export default function Home() {
               date="Apr 25"
               title="Virtual Speedrun Ethereum Workshop"
               location="Oxford University"
+              description="We'll show off SpeedRun Ethereum and dive into vibe coding onchain apps and the art of one-shotting."
+            />
+            {/* Added 05/23/2025 */}
+            <EventCard
+              date="May 15"
+              title="Virtual Speedrun Ethereum Workshop"
+              location="National Autonomous University of Mexico"
+              description="We'll show off SpeedRun Ethereum and dive into vibe coding onchain apps and the art of one-shotting."
+            />
+            <EventCard
+              date="May 22"
+              title="Virtual Office Hours"
+              location="Xavierian Pontifical University"
+              description="Open office hours on Zoom."
+            />
+            <EventCard
+              date="May 27-29"
+              title="Speedrun Ethereum Workshop"
+              location="ETHPrague"
+              description="We'll show off SpeedRun Ethereum and dive into vibe coding onchain apps and the art of one-shotting."
+            />
+            <EventCard
+              date="May 29"
+              title="Speedrun Ethereum Workshop"
+              location="CTU Prague"
+              description="We'll show off SpeedRun Ethereum and dive into vibe coding onchain apps and the art of one-shotting."
+            />
+            <EventCard
+              date="June 5"
+              title="Virtual Speedrun Ethereum Workshop"
+              location="Swiss Federal Technology Institute of Lausanne"
+              description="We'll show off SpeedRun Ethereum and dive into vibe coding onchain apps and the art of one-shotting."
+            />
+            <EventCard
+              date="June 7"
+              title="Virtual Office Hours"
+              location="Bocconi University"
+              description="Open office hours on Zoom."
+            />
+            <EventCard
+              date="June 10"
+              title="Virtual Office Hours"
+              location="Brno University of Technology"
+              description="Open office hours on Zoom."
+            />
+            <EventCard
+              date="June 10"
+              title="Virtual Speedrun Ethereum Workshop"
+              location="Indian Institute of Technology Dhanbadh"
+              description="We'll show off SpeedRun Ethereum and dive into vibe coding onchain apps and the art of one-shotting."
+            />
+            <EventCard
+              date="June 11"
+              title="Virtual Speedrun Ethereum Workshop"
+              location="Singapore"
               description="We'll show off SpeedRun Ethereum and dive into vibe coding onchain apps and the art of one-shotting."
             />
           </div>
