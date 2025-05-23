@@ -20,7 +20,7 @@ const Marker: React.FC<MarkerProps> = ({ left, top, label, sublabel, color = "gr
     <div className="absolute group cursor-pointer" style={{ left, top }}>
       {/* Fancy pin shape with shadow and glow */}
       <div
-        className={`w-4 h-4 ${colorClasses[color]} rounded-full border-[1.3px] border-[#886e4d] shadow-sm shadow-[#a2845ed6]`}
+        className={`w-3 h-3 ${colorClasses[color]} rounded-full border-[1px] border-[#886e4d] shadow-sm shadow-[#a2845ed6]`}
       />
 
       {/* Tooltip on hover */}
