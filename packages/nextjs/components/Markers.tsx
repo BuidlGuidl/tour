@@ -7,13 +7,14 @@ type MarkerProps = {
   top: string;
   label: string;
   sublabel?: string;
-  color?: "green" | "yellow";
+  color?: "green" | "yellow" | "blue";
 };
 
 const Marker: React.FC<MarkerProps> = ({ left, top, label, sublabel, color = "green" }) => {
   const colorClasses = {
     green: "bg-[#90fc90]",
     yellow: "bg-[#fff97f]",
+    blue: "bg-[#90caf9]",
   };
 
   return (

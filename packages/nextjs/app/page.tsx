@@ -117,26 +117,26 @@ export default function Home() {
               </div>
 
               {/* Map Markers */}
-              <Marker left="24%" top="39%" label="Lawrence" color="yellow" />
-              <Marker left="22%" top="38%" label="Boulder" color="yellow" />
-              <Marker left="46.5%" top="35.5%" label="Oxford" color="yellow" />
-              <Marker left="20%" top="41%" label="Los Angeles" color="yellow" />
-              <Marker left="75%" top="47%" label="Taipei" color="yellow" />
-              <Marker left="19.2%" top="42%" label="San Francisco" color="yellow" />
-              <Marker left="30.3%" top="39.5%" label="New York" color="yellow" />
-              <Marker left="31.5%" top="38.3%" label="Boston" color="yellow" />
-              <Marker left="48.5%" top="39.3%" label="Cannes" color="yellow" />
-              <Marker left="24.3%" top="43.7%" label="Austin" color="yellow" />
-              <Marker left="49.7%" top="37%" label="Munich" color="yellow" />
-              <Marker left="65.3%" top="46.7%" label="New Delhi" color="yellow" />
-              <Marker left="49.8%" top="35.8%" label="Berlin" color="yellow" />
+              <Marker left="24%" top="39%" label="Lawrence" color="blue" />
+              <Marker left="22%" top="38%" label="Boulder" color="blue" />
+              <Marker left="46.5%" top="35.5%" label="Oxford" color="blue" />
+              <Marker left="20%" top="41%" label="Los Angeles" color="blue" />
+              <Marker left="75%" top="47%" label="Taipei" color="blue" />
+              <Marker left="19.2%" top="42%" label="San Francisco" color="blue" />
+              <Marker left="30.3%" top="39.5%" label="New York" color="blue" />
+              <Marker left="31.5%" top="38.3%" label="Boston" color="blue" />
+              <Marker left="48.5%" top="39.3%" label="Cannes" color="blue" />
+              <Marker left="24.3%" top="43.7%" label="Austin" color="blue" />
+              <Marker left="49.7%" top="37%" label="Munich" color="blue" />
+              <Marker left="65.3%" top="46.7%" label="New Delhi" color="blue" />
+              <Marker left="49.8%" top="35.8%" label="Berlin" color="blue" />
               {/* <Marker left="53.2%" top="38.7%" label="Romania" color="yellow" />  Possible Location */}
-              <Marker left="28.8%" top="39.5%" label="Pittsburgh" color="yellow" />
-              <Marker left="34.5%" top="59%" label="Brazil" color="yellow" />
-              <Marker left="52%" top="36%" label="Warsaw" color="yellow" />
+              <Marker left="28.8%" top="39.5%" label="Pittsburgh" color="blue" />
+              <Marker left="34.5%" top="59%" label="Brazil" color="blue" />
+              <Marker left="52%" top="36%" label="Warsaw" color="blue" />
               {/* <Marker left="52.2%" top="39%" label="Belgrade" color="yellow" /> Possible Location */}
-              <Marker left="19%" top="41%" label="UC Berkeley" color="yellow" />
-              <Marker left="32%" top="69%" label="Argentina" color="yellow" />
+              <Marker left="19%" top="41%" label="UC Berkeley" color="blue" />
+              <Marker left="32%" top="69%" label="Argentina" color="blue" />
               <Marker left="50.5%" top="36.9%" label="Prague" sublabel="ethPrague" />
               {/* <Marker left="19.3%" top="37.4%" label="Seattle" color="yellow" /> Possible Location */}
               {/* <Marker left="26.7%" top="39.4%" label="Chicago" color="yellow" /> Possible Location */}
@@ -161,7 +161,7 @@ export default function Home() {
             <div className="flex flex-col items-center mt-3">
               <div className="flex items-center gap-4">
                 <div className="flex items-center gap-2">
-                  <div className="w-4 h-4 bg-[#fff97f] rounded-full border-[1.3px] border-[#886e4d] shadow-sm shadow-[#a2845ed6]"></div>
+                  <div className="w-4 h-4 bg-[#90caf9] rounded-full border-[1.3px] border-[#886e4d] shadow-sm shadow-[#a2845ed6]"></div>
                   <span className={`${textColor} font-ppwriter`}>Past Events</span>
                 </div>
                 <div className="flex items-center gap-2">
@@ -175,7 +175,7 @@ export default function Home() {
 
         {/* Events Section */}
         <div id="events-section" className="container mx-auto px-6 py-12 mb-16 flex flex-col items-center">
-          <h2 className={`text-4xl font-bold mb-12 font-ppwriter ${textColor}`}>Next events:</h2>
+          <h2 className={`text-4xl font-bold mb-12 ${textColor}`}>Next events:</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <EventCard
               date="May 27-29"
