@@ -174,7 +174,7 @@ export default function Home() {
         </div>
 
         {/* Events Section */}
-        <div id="events-section" className="container mx-auto px-6 py-12 mb-16 flex flex-col items-center">
+        {/* <div id="events-section" className="container mx-auto px-6 py-12 mb-16 flex flex-col items-center">
           <h2 className={`text-4xl font-bold mb-12 ${textColor}`}>Next events:</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <EventCard
@@ -220,7 +220,7 @@ export default function Home() {
               description="We'll show off SpeedRun Ethereum and dive into vibe coding onchain apps and the art of one-shotting."
             />
           </div>
-        </div>
+        </div> */}
 
         {/* CTA Section */}
         <div className="flex flex-col items-center text-center px-6 py-12 mb-16 bg-[#f7d998]">

@@ -56,7 +56,7 @@ export const Header = () => {
         </ul>
       </div>
       <div className="navbar-end flex-grow mr-4 mt-4">
-        <RainbowKitCustomConnectButton />
+        {/* <RainbowKitCustomConnectButton /> */}
         {isLocalNetwork && <FaucetButton />}
       </div>
     </div>
