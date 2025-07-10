@@ -9,8 +9,8 @@ export default function Home() {
   const [scrollY, setScrollY] = useState(0);
   const textColor = "text-[#392b18]";
 
-  const scrollToEvents = useCallback(() => {
-    document.getElementById("events-section")?.scrollIntoView({ behavior: "smooth" });
+  const scrollToMap = useCallback(() => {
+    document.getElementById("map-section")?.scrollIntoView({ behavior: "smooth" });
   }, []);
 
   useEffect(() => {
@@ -74,7 +74,7 @@ export default function Home() {
               <p className={`py-3 text-xl ${textColor}`}>Bringing Ethereum curriculum, tools, and mentorship to you!</p>
               <button
                 className="bg-sky-200 hover:bg-sky-300 border-[1.3px] border-[#55452f] ${textColor} px-6 py-2 rounded-[32px] font-ppwriter font-normal"
-                onClick={scrollToEvents}
+                onClick={scrollToMap}
               >
                 Follow our next dates ↓
               </button>
@@ -83,7 +83,7 @@ export default function Home() {
         </div>
 
         {/* New Map Section */}
-        <div className="container mx-auto px-6 lg:py-20 py-10">
+        <div id="map-section" className="container mx-auto px-6 lg:py-20 py-10">
           <div className="flex flex-col items-center">
             <h2 className={`text-4xl font-bold text-center mb-10 ${textColor}`}>Event Locations:</h2>
             <div
