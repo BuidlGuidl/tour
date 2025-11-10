@@ -182,19 +182,19 @@ export default function Home() {
               date="May 27-29"
               title="Speedrun Ethereum Workshop"
               location="ETHPrague"
-              description="We'll show off SpeedRun Ethereum and dive into vibe coding onchain apps and the art of one-shotting."
+              description="We'll show off Speedrun Ethereum and dive into vibe coding onchain apps and the art of one-shotting."
             />
             <EventCard
               date="May 29"
               title="Speedrun Ethereum Workshop"
               location="CTU Prague"
-              description="We'll show off SpeedRun Ethereum and dive into vibe coding onchain apps and the art of one-shotting."
+              description="We'll show off Speedrun Ethereum and dive into vibe coding onchain apps and the art of one-shotting."
             />
             <EventCard
               date="June 5"
               title="Virtual Speedrun Ethereum Workshop"
               location="Swiss Federal Technology Institute of Lausanne"
-              description="We'll show off SpeedRun Ethereum and dive into vibe coding onchain apps and the art of one-shotting."
+              description="We'll show off Speedrun Ethereum and dive into vibe coding onchain apps and the art of one-shotting."
             />
             <EventCard
               date="June 7"
@@ -212,13 +212,13 @@ export default function Home() {
               date="June 10"
               title="Virtual Speedrun Ethereum Workshop"
               location="Indian Institute of Technology Dhanbadh"
-              description="We'll show off SpeedRun Ethereum and dive into vibe coding onchain apps and the art of one-shotting."
+              description="We'll show off Speedrun Ethereum and dive into vibe coding onchain apps and the art of one-shotting."
             />
             <EventCard
               date="June 11"
               title="Virtual Speedrun Ethereum Workshop"
               location="Singapore"
-              description="We'll show off SpeedRun Ethereum and dive into vibe coding onchain apps and the art of one-shotting."
+              description="We'll show off Speedrun Ethereum and dive into vibe coding onchain apps and the art of one-shotting."
             />
           </div>
         </div> */}
