@@ -4,10 +4,21 @@ import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 import EventCard from "../components/EventCard";
 import Marker from "../components/Markers";
+import { events } from "../events";
+import { formatEventDate, getEventSortDate, shouldDisplayEvent } from "../utils/events-dates";
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
   const textColor = "text-[#392b18]";
+
+  // Process events using the new system
+  const processedEvents = events
+    .filter(shouldDisplayEvent)
+    .sort((a, b) => getEventSortDate(a).getTime() - getEventSortDate(b).getTime())
+    .map(event => ({
+      ...event,
+      date: formatEventDate(event.dateStart, event.dateEnd),
+    }));
 
   const scrollToMap = useCallback(() => {
     document.getElementById("map-section")?.scrollIntoView({ behavior: "smooth" });
@@ -156,7 +167,6 @@ export default function Home() {
               <Marker left="67%" top="47.2%" label="Dhanbadh" sublabel="Indian Institute of Technology" />
               <Marker left="71%" top="54.8%" label="Singapore" />
               <Marker left="48.6%" top="38.3%" label="Lausanne" sublabel="Swiss Federal Technology Institute" />
-              <Marker left="46.5%" top="42.4%" label="Málaga" sublabel="University of Málaga" />
             </div>
             {/* Map legend */}
             <div className="flex flex-col items-center mt-3">
@@ -173,6 +183,24 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        {/* Dynamic Events Section */}
+        {processedEvents.length > 0 && (
+          <div id="events-section" className="container mx-auto px-6 py-12 mb-16 flex flex-col items-center">
+            <h2 className={`text-4xl font-bold mb-12 ${textColor}`}>Next events:</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {processedEvents.map((event, index) => (
+                <EventCard
+                  key={index}
+                  date={event.date}
+                  title={event.title}
+                  location={event.location}
+                  description={event.description}
+                />
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Events Section */}
         {/* <div id="events-section" className="container mx-auto px-6 py-12 mb-16 flex flex-col items-center">

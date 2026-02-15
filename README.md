@@ -78,3 +78,34 @@ To know more about its features, check out our [website](https://scaffoldeth.io)
 We welcome contributions to Scaffold-ETH 2!
 
 Please see [CONTRIBUTING.MD](https://github.com/scaffold-eth/scaffold-eth-2/blob/main/CONTRIBUTING.md) for more information and guidelines for contributing to Scaffold-ETH 2.
+
+## Event Card Rendering
+
+The "Next events:" event cards are rendered from the const events object in packages/nextjs/events.ts
+
+Each event requires a title, location, description, and dateStart. Date format is YYYY-MM-DD
+
+Here's an example single day event:
+```
+{
+  title: "A past single day event",
+  location: "Location 1",
+  description: "We'll show off SpeedRun Ethereum and dive into vibe coding onchain apps and the art of one-shotting.",
+  dateStart: "2025-09-10",
+}
+```
+
+This is an example multi-day event with the optional dateEnd:
+```
+{
+  title: "A past event with a range of days",
+  location: "Location 2",
+  description: "We'll show off SpeedRun Ethereum and dive into vibe coding onchain apps and the art of one-shotting.",
+  dateStart: "2025-08-28",
+  dateEnd: "2025-09-01",
+}
+```
+
+Rendered event cards are sorted by dateStart. They will not be rendered if an event is more than 2 days old, they are missing one of the required properties, or if a user accidentally enters a dateEnd that is before dateStart.
+
+
